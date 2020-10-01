@@ -41,7 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Append and Prepend Nav
+
+
+
+
 //Selectors
+let nav = document.querySelector('nav')
 let navItems = document.querySelectorAll(".nav-item")
 let h1 = document.getElementsByTagName('h1')
 let button = document.getElementsByTagName('button')
@@ -64,6 +70,11 @@ let footer = document.querySelector('footer').children
 
 console.log(footer)
 
+
+
+
+
+
 //Implimentations
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
@@ -71,6 +82,21 @@ navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
 navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
 navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+let home = document.createElement('a')
+home.setAttribute('class', 'nav-item')
+home.setAttribute('href', '#')
+home.textContent = 'Home'
+nav.prepend(home)//prepend new nav element
+
+let help = document.createElement('a')
+help.setAttribute('class', 'nav-item')
+help.setAttribute('href', '#')
+help.textContent = 'Help'
+nav.appendChild(help)//append new nav element
+
+navItems = document.querySelectorAll('.nav-item')//refresh
+navItems.forEach(item => item.style.color = "green")//Turn Nav Green
 
 h1[0].textContent = siteContent["cta"]["h1"] //Not sure how to add <br>
 button[0].textContent = siteContent['cta']['button']
@@ -99,3 +125,4 @@ contact[2].textContent = siteContent["contact"]["phone"]
 contact[3].textContent = siteContent["contact"]["email"]
 
 footer[0].textContent = siteContent["footer"]["copyright"]
+
