@@ -41,15 +41,29 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Selectors
 let navItems = document.querySelectorAll(".nav-item")
 let h1 = document.getElementsByTagName('h1')
 let button = document.getElementsByTagName('button')
+
 let ctaImg = document.getElementById("cta-img")
+
 let mainContent = document.querySelectorAll('.text-content')
-let features = mainContent[0].childNodes
+let features = mainContent[0].children
+let about = mainContent[1].children
+let services = mainContent[2].children
+let product = mainContent[3].children
+let vision = mainContent[4].children
 
-console.log(features)
+let middleImg = document.getElementById("middle-img")
 
+let contact = document.querySelector('.contact').children
+
+
+
+console.log(contact)
+
+//Implimentations
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
 navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
@@ -61,6 +75,19 @@ h1[0].textContent = siteContent["cta"]["h1"]
 button[0].textContent = siteContent['cta']['button']
 ctaImg.setAttribute('src', 'img/header-img.png')
 
-features[1].textContent = siteContent["main-content"]["features-h4"]
-features[3].textContent = siteContent["main-content"]["features-content"]
+features[0].textContent = siteContent["main-content"]["features-h4"]
+features[1].textContent = siteContent["main-content"]["features-content"]
 
+about[0].textContent = siteContent["main-content"]["about-h4"]
+about[1].textContent = siteContent["main-content"]["about-content"]
+
+services[0].textContent = siteContent["main-content"]["services-h4"]
+services[1].textContent = siteContent["main-content"]["services-content"]
+
+product[0].textContent = siteContent["main-content"]["product-h4"]
+product[1].textContent = siteContent['main-content']["product-content"]
+
+vision[0].textContent = siteContent['main-content']["vision-h4"]
+vision[1].textContent = siteContent['main-content']['vision-content']
+
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
