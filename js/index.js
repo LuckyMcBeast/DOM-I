@@ -59,9 +59,10 @@ let middleImg = document.getElementById("middle-img")
 
 let contact = document.querySelector('.contact').children
 
+let footer = document.querySelector('footer').children
 
 
-console.log(contact)
+console.log(footer)
 
 //Implimentations
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
@@ -71,7 +72,7 @@ navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
 navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
-h1[0].textContent = siteContent["cta"]["h1"]
+h1[0].textContent = siteContent["cta"]["h1"] //Not sure how to add <br>
 button[0].textContent = siteContent['cta']['button']
 ctaImg.setAttribute('src', 'img/header-img.png')
 
@@ -91,3 +92,10 @@ vision[0].textContent = siteContent['main-content']["vision-h4"]
 vision[1].textContent = siteContent['main-content']['vision-content']
 
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
+
+contact[0].textContent = siteContent["contact"]["contact-h4"]
+contact[1].textContent = siteContent["contact"]["address"]
+contact[2].textContent = siteContent["contact"]["phone"]
+contact[3].textContent = siteContent["contact"]["email"]
+
+footer[0].textContent = siteContent["footer"]["copyright"]
