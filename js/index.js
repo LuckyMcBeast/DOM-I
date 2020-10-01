@@ -45,6 +45,10 @@ let navItems = document.querySelectorAll(".nav-item")
 let h1 = document.getElementsByTagName('h1')
 let button = document.getElementsByTagName('button')
 let ctaImg = document.getElementById("cta-img")
+let mainContent = document.querySelectorAll('.text-content')
+let features = mainContent[0].childNodes
+
+console.log(features)
 
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
@@ -56,3 +60,7 @@ navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
 h1[0].textContent = siteContent["cta"]["h1"]
 button[0].textContent = siteContent['cta']['button']
 ctaImg.setAttribute('src', 'img/header-img.png')
+
+features[1].textContent = siteContent["main-content"]["features-h4"]
+features[3].textContent = siteContent["main-content"]["features-content"]
+
